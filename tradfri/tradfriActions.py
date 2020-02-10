@@ -8,6 +8,7 @@
 # version     : v1.2.0
 #
 # changelog   :
+# - v1.2.1      add red color                                           (pakon)
 # - v1.2.0      update for gateway 1.1.15 issues                        (harald)
 # - v1.1.0      refactor for cleaner code                               (harald)
 # - v1.0.0      initial concept                                         (harald)
@@ -77,6 +78,8 @@ def tradfri_color_light(hubip, apiuser, apikey, lightbulbid, value):
         payload = '{ "3311" : [{ "5709" : %s, "5710": %s }] }' % ("30140", "26909")
     elif value == 'cold':
         payload = '{ "3311" : [{ "5709" : %s, "5710": %s }] }' % ("24930", "24684")
+    elif value == 'red':
+        payload = '{ "3311" : [{ "5709" : %s, "5710": %s }] }' % ("50000", "15000")
 
     api = '{} -m put -u "{}" -k "{}" -e \'{}\' "{}"'.format(coap, apiuser, apikey,
                                                                          payload, tradfriHub)

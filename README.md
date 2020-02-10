@@ -1,6 +1,8 @@
 # ikea-smartlights
 python framework for controlling the Ikea smart lights (tradfri)
 
+##Forked from https://github.com/hvanderlaan/ikea-smartlight/
+
 ### update
 as of gateway version 1.1.15 the usage of securityid is prohibated, you need to register a api user and you will get a pre shared key from the gateway. follow the steps below and all should be well
 ```bash
@@ -77,7 +79,7 @@ groupid: 186970, name: hal boven, state: off
 ```
 
 ### todo
-- [ ] add support for new color lightbulbs
+- [+] add support for new color lightbulbs (partialy, Color: RED - feel free to contribute)
 - [X] add change state (power on/off lightbulb)
 - [X] add dimmer value (dimm lightbulb)
 - [X] add change state group (power on/off groups)

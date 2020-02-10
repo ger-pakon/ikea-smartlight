@@ -8,6 +8,7 @@
 # version     : v1.2.0
 #
 # changelog   :
+# - v1.2.1      add switch for red light                                (pakon)
 # - v1.2.0      update for gateway 1.1.15 issues                        (harald)
 # - v1.1.0      refactor for cleaner code                               (harald)
 # - v1.0.0      initial concept                                         (harald)
@@ -72,10 +73,10 @@ def main():
             sys.stderr.write('[-] Tradfri: dim value can only be between 1 and 100\n')
             sys.exit(1)
     elif args.action == 'color':
-        if args.value == 'warm' or args.value == 'normal' or args.value == 'cold':
+        if args.value == 'warm' or args.value == 'normal' or args.value == 'cold' or args.value == 'red':
             tradfriActions.tradfri_color_light(hubip, apiuser, apikey, args.lightbulbid, args.value)
         else:
-            sys.stderr.write('[-] Tradfri: color value can only be warm/normal/cold\n')
+            sys.stderr.write('[-] Tradfri: color value can only be warm/normal/cold/red\n')
             sys.exit(1)
 
 if __name__ == "__main__":
