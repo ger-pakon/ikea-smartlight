@@ -1,7 +1,7 @@
 # ikea-smartlights
 python framework for controlling the Ikea smart lights (tradfri)
 
-##Forked from https://github.com/hvanderlaan/ikea-smartlight/
+## Forked from https://github.com/hvanderlaan/ikea-smartlight/
 
 ### update
 as of gateway version 1.1.15 the usage of securityid is prohibated, you need to register a api user and you will get a pre shared key from the gateway. follow the steps below and all should be well
